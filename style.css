@@ -1,195 +1,619 @@
-<!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaNexus - Aquários Premium</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <canvas id="particlesCanvas"></canvas>
-    <div class="bubble-container" id="bubbleContainer"></div>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-icon"><i class="fas fa-fish"></i></div>
-                <span class="logo-text">Aqua<span class="gradient-text">Nexus</span></span>
-                <span class="logo-badge">Premium</span>
-            </div>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#produtos" class="nav-link">Produtos</a>
-                <a href="#galeria" class="nav-link">Galeria</a>
-                <a href="#jogo" class="nav-link">AquaGame</a>
-                <a href="#contato" class="nav-link">Contato</a>
-            </div>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle"><i class="fas fa-sun sun-icon"></i><i class="fas fa-moon moon-icon"></i></button>
-                <a href="#contato" class="btn-nav-cart"><i class="fas fa-shopping-cart"></i><span>Orçamento</span></a>
-                <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-            </div>
-        </div>
-    </nav>
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge"><i class="fas fa-fish"></i><span>Desde 2024 • Premium Aquarismo</span></div>
-            <h1 class="hero-title">Transforme seu<br><span class="gradient-text">Mundo Aquático</span></h1>
-            <p class="hero-subtitle">Aquários projetados com tecnologia, design e paixão. Do paisagismo aquático à manutenção completa — mergulhe nessa experiência.</p>
-            <div class="hero-stats">
-                <div class="stat-item"><span class="stat-number" data-target="250">0</span><span class="stat-label">+ Aquários Entregues</span></div>
-                <div class="stat-item"><span class="stat-number" data-target="98">0</span><span class="stat-label">% Satisfação</span></div>
-                <div class="stat-item"><span class="stat-number" data-target="47">0</span><span class="stat-label">Espécies Exóticas</span></div>
-            </div>
-            <div class="hero-actions">
-                <a href="#produtos" class="btn btn-primary"><span>Ver Produtos</span><i class="fas fa-arrow-down"></i></a>
-                <a href="#jogo" class="btn btn-outline"><i class="fas fa-gamepad"></i><span>Jogar Agora</span></a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-aquarium">
-                <div class="aquarium-glass">
-                    <div class="fish f1"><i class="fas fa-fish"></i></div>
-                    <div class="fish f2"><i class="fas fa-fish"></i></div>
-                    <div class="fish f3"><i class="fas fa-fish"></i></div>
-                    <div class="fish f4"><i class="fas fa-fish"></i></div>
-                    <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
-                    <div class="seaweed s1"></div><div class="seaweed s2"></div>
-                    <div class="sand-line"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="produtos" id="produtos">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-box"></i> Produtos</span>
-            <h2 class="section-title">Nossos <span class="gradient-text">Kits</span> e Serviços</h2>
-            <p class="section-desc">Soluções completas para todos os níveis de aquarismo</p>
-        </div>
-        <div class="produtos-grid">
-            <div class="produto-card" data-delay="0">
-                <div class="card-img"><i class="fas fa-water"></i><span class="card-tag">Iniciante</span></div>
-                <div class="card-body">
-                    <h3>Kit Iniciante 30L</h3>
-                    <p>Aquário completo 30L com filtro, iluminação LED, substrato e 3 plantas naturais.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Filtro interno</span><span><i class="fas fa-check"></i> LED 6500K</span><span><i class="fas fa-check"></i> Termostato</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 599</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card featured" data-delay="1">
-                <div class="card-badge">Mais Popular</div>
-                <div class="card-img"><i class="fas fa-tree"></i><span class="card-tag">Intermediário</span></div>
-                <div class="card-body">
-                    <h3>Kit Nature 60L</h3>
-                    <p>Aquário plantado 60L com CO2, substrato fértil, aquascaping completo e 8 espécies.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> CO2 completo</span><span><i class="fas fa-check"></i> Substrato fértil</span><span><i class="fas fa-check"></i> Aquascaping</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 1.299</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="2">
-                <div class="card-img"><i class="fas fa-gem"></i><span class="card-tag">Avançado</span></div>
-                <div class="card-body">
-                    <h3>Aquário Premium 120L</h3>
-                    <p>Tanque 120L com sump externo, automação completa, skimmer e reef-ready.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Automação WiFi</span><span><i class="fas fa-check"></i> Sump externo</span><span><i class="fas fa-check"></i> Reef Ready</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 3.499</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="3">
-                <div class="card-img"><i class="fas fa-hand-holding-heart"></i><span class="card-tag">Serviço</span></div>
-                <div class="card-body">
-                    <h3>Manutenção Mensal</h3>
-                    <p>Serviço completo de manutenção: limpeza, troca parcial de água, testes e poda.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Visita semanal</span><span><i class="fas fa-check"></i> Testes de água</span><span><i class="fas fa-check"></i> Poda paisagismo</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 149/mês</span><a href="#contato" class="btn-card">Assinar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="4">
-                <div class="card-img"><i class="fas fa-palette"></i><span class="card-tag">Projeto</span></div>
-                <div class="card-body">
-                    <h3>Aquascaping Custom</h3>
-                    <p>Projeto personalizado de paisagismo aquático com designer especializado.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Projeto 3D</span><span><i class="fas fa-check"></i> Rochas & troncos</span><span><i class="fas fa-check"></i> Plantas selecionadas</span></div>
-                    <div class="card-footer"><span class="card-price">Consultar</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="5">
-                <div class="card-img"><i class="fas fa-seedling"></i><span class="card-tag">Acessório</span></div>
-                <div class="card-body">
-                    <h3>Kit Plantas + CO2</h3>
-                    <p>Pacote com 10 mudas variadas + sistema CO2 artesanal com difusor cerâmico.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> 10 mudas</span><span><i class="fas fa-check"></i> CO2 + difusor</span><span><i class="fas fa-check"></i> Fertilizante 1L</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 249</span><a href="#contato" class="btn-card">Comprar</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="galeria" id="galeria">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-images"></i> Galeria</span>
-            <h2 class="section-title">Projetos <span class="gradient-text">Realizados</span></h2>
-            <p class="section-desc">Veja alguns dos aquários que já montamos para nossos clientes</p>
-        </div>
-        <div class="galeria-grid">
-            <div class="galeria-item g1"><div class="galeria-overlay"><h3>Aquário Nature 60L</h3><p>Iwagumi com Riccardia</p></div></div>
-            <div class="galeria-item g2"><div class="galeria-overlay"><h3>Aquário Premium 200L</h3><p>Community sul-americano</p></div></div>
-            <div class="galeria-item g3"><div class="galeria-overlay"><h3>Paludário 80L</h3><p>Vivário com queda d'água</p></div></div>
-            <div class="galeria-item g4"><div class="galeria-overlay"><h3>Nano Reef 30L</h3><p>Recifal compacto</p></div></div>
-            <div class="galeria-item g5"><div class="galeria-overlay"><h3>Aquário Holandês 100L</h3><p>Jardim aquático holandês</p></div></div>
-            <div class="galeria-item g6"><div class="galeria-overlay"><h3>Aquário Betta 20L</h3><p>Estilo biotopo asiático</p></div></div>
-        </div>
-    </section>
-    <section class="jogo" id="jogo">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-gamepad"></i> AquaGame</span>
-            <h2 class="section-title">Alimente os <span class="gradient-text">Peixes</span> 🐟</h2>
-            <p class="section-desc">Clique no aquário para jogar! Alimente os peixes e ganhe pontos!</p>
-        </div>
-        <div class="game-wrapper">
-            <div class="game-hud">
-                <div class="hud-item"><i class="fas fa-star"></i><span>Pontos: <strong id="gameScore">0</strong></span></div>
-                <div class="hud-item"><i class="fas fa-fish"></i><span>Peixes: <strong id="gameFish">5</strong></span></div>
-                <div class="hud-item"><i class="fas fa-clock"></i><span>Tempo: <strong id="gameTimer">30s</strong></span></div>
-            </div>
-            <canvas id="gameCanvas" width="800" height="500"></canvas>
-            <div class="game-controls">
-                <button class="btn btn-primary" id="startGameBtn"><i class="fas fa-play"></i><span>Iniciar Jogo</span></button>
-                <div class="game-info"><p><i class="fas fa-mouse-pointer"></i> Clique para soltar comida</p><p><i class="fas fa-fish"></i> Cada peixe alimentado = +10 pontos</p></div>
-            </div>
-        </div>
-    </section>
-    <section class="contato" id="contato">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-envelope"></i> Contato</span>
-            <h2 class="section-title">Vamos criar seu <span class="gradient-text">Aquário</span></h2>
-            <p class="section-desc">Solicite um orçamento ou tire suas dúvidas</p>
-        </div>
-        <div class="contato-container">
-            <div class="contato-info">
-                <div class="info-card"><i class="fas fa-map-marker-alt"></i><div><h4>Localização</h4><p>São Paulo, SP - Brasil</p></div></div>
-                <div class="info-card"><i class="fas fa-whatsapp"></i><div><h4>WhatsApp</h4><p>(11) 99999-8888</p></div></div>
-                <div class="info-card"><i class="fas fa-envelope"></i><div><h4>E-mail</h4><p>contato@aquanexus.com.br</p></div></div>
-                <div class="info-card"><i class="fas fa-clock"></i><div><h4>Horários</h4><p>Seg-Sex: 9h-18h | Sáb: 9h-13h</p></div></div>
-            </div>
-            <form class="contato-form" id="contatoForm">
-                <div class="form-group"><input type="text" placeholder="Seu nome" required><i class="fas fa-user"></i></div>
-                <div class="form-group"><input type="email" placeholder="Seu e-mail" required><i class="fas fa-envelope"></i></div>
-                <div class="form-group"><select required><option value="">Selecione um serviço</option><option>Kit Iniciante 30L</option><option>Kit Nature 60L</option><option>Aquário Premium 120L</option><option>Manutenção Mensal</option><option>Aquascaping Custom</option><option>Kit Plantas + CO2</option><option>Outro</option></select><i class="fas fa-box"></i></div>
-                <div class="form-group textarea-group"><textarea placeholder="Descreva seu projeto ou dúvida..." rows="4"></textarea><i class="fas fa-pen"></i></div>
-                <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i><span>Enviar Mensagem</span></button>
-            </form>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand"><div class="logo-icon"><i class="fas fa-fish"></i></div><span>Aqua<span class="gradient-text">Nexus</span></span></div>
-            <p class="footer-text"><i class="fas fa-heart" style="color: var(--primary);"></i> Aquários Premium com tecnologia e paixão</p>
-            <div class="footer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
-            <p class="footer-copy">© 2026 AquaNexus — Criado por <span class="gradient-text">Nexus AI</span> 🚀</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+/* ========== CSS VARIABLES / THEMES ========== */
+:root {
+    --bg: #0a0e17;
+    --bg-card: #111827;
+    --text: #f1f5f9;
+    --text-sec: #94a3b8;
+    --primary: #00d4aa;
+    --primary-dim: rgba(0, 212, 170, 0.15);
+    --secondary: #0ea5e9;
+    --accent: #f59e0b;
+    --border: rgba(148, 163, 184, 0.1);
+    --radius: 16px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+    --bg: #f0fdfa;
+    --bg-card: #ffffff;
+    --text: #0f172a;
+    --text-sec: #475569;
+    --border: rgba(0, 212, 170, 0.15);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    transition: background var(--transition), color var(--transition);
+}
+
+#particlesCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.bubble-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+.bubble-bg {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(0,212,170,0.08), transparent);
+    animation: floatBubble linear infinite;
+}
+@keyframes floatBubble {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: all var(--transition);
+    background: transparent;
+}
+.navbar.scrolled {
+    background: rgba(10, 14, 23, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+}
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(240, 253, 250, 0.85);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo .logo-icon {
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: #fff;
+}
+.logo-text { font-size: 20px; font-weight: 700; }
+.logo-badge {
+    font-size: 10px; padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--primary-dim);
+    color: var(--primary);
+    font-weight: 600;
+    border: 1px solid rgba(0,212,170,0.2);
+}
+
+.nav-links { display: flex; gap: 32px; }
+.nav-link {
+    color: var(--text-sec);
+    text-decoration: none;
+    font-size: 14px; font-weight: 500;
+    transition: color var(--transition);
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: var(--primary);
+    transition: width var(--transition);
+    border-radius: 2px;
+}
+.nav-link:hover, .nav-link.active { color: var(--text); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.theme-toggle {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-sec);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    transition: all var(--transition);
+}
+.theme-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+[data-theme="dark"] .sun-icon { display: none; }
+[data-theme="light"] .moon-icon { display: none; }
+
+.btn-nav-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px; font-weight: 600;
+    transition: all var(--transition);
+}
+.btn-nav-cart:hover { transform: scale(1.05); }
+
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-overlay {
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 50% 40%, rgba(0,212,170,0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--primary-dim);
+    color: var(--primary);
+    font-size: 12px; font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: var(--text-sec);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 32px;
+}
+
+.hero-stats { display: flex; gap: 32px; margin-bottom: 36px; }
+.stat-item { display: flex; flex-direction: column; }
+.stat-number {
+    font-size: 28px; font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.stat-label { font-size: 12px; color: var(--text-sec); font-weight: 500; }
+
+.hero-actions { display: flex; gap: 16px; }
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 14px; font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition);
+    cursor: pointer;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,212,170,0.3); }
+.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: transparent;
+}
+.btn-outline:hover { border-color: var(--primary); background: var(--primary-dim); color: var(--primary); }
+
+.hero-visual { display: flex; justify-content: center; }
+.hero-aquarium { width: 320px; height: 420px; position: relative; }
+.aquarium-glass {
+    width: 100%; height: 100%;
+    border-radius: 30px 30px 20px 20px;
+    border: 3px solid rgba(0,212,170,0.2);
+    background: linear-gradient(180deg, rgba(0,212,170,0.05), rgba(10,14,23,0.8) 80%);
+    position: relative;
+    overflow: hidden;
+}
+.fish {
+    position: absolute;
+    font-size: 24px;
+    color: var(--primary);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 6px rgba(0,212,170,0.4));
+    animation: swim linear infinite;
+}
+.f1 { animation-duration: 8s; top: 20%; font-size: 20px; }
+.f2 { animation-duration: 12s; top: 45%; font-size: 28px; animation-delay: -3s; }
+.f3 { animation-duration: 10s; top: 65%; font-size: 18px; animation-delay: -6s; }
+.f4 { animation-duration: 14s; top: 35%; font-size: 22px; animation-delay: -9s; }
+
+@keyframes swim {
+    0% { transform: translateX(-40px) scaleX(1); }
+    49% { transform: translateX(280px) scaleX(1); }
+    50% { transform: translateX(280px) scaleX(-1); }
+    99% { transform: translateX(-40px) scaleX(-1); }
+    100% { transform: translateX(-40px) scaleX(1); }
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent);
+    animation: rise linear infinite;
+}
+.b1 { left: 30%; bottom: 20%; width: 8px; height: 8px; animation-duration: 4s; }
+.b2 { left: 60%; bottom: 30%; width: 6px; height: 6px; animation-duration: 5s; animation-delay: -2s; }
+.b3 { left: 45%; bottom: 15%; width: 10px; height: 10px; animation-duration: 3.5s; animation-delay: -4s; }
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 0.6; }
+    100% { transform: translateY(-420px); opacity: 0; }
+}
+
+.seaweed {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(to top, #00d4aa, #0ea5e9);
+    border-radius: 4px;
+    animation: sway ease-in-out infinite;
+}
+.s1 { left: 20%; height: 80px; animation-duration: 3s; }
+.s2 { left: 65%; height: 100px; animation-duration: 4s; animation-delay: -1.5s; }
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.sand-line {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 20px;
+    background: linear-gradient(to top, rgba(0,212,170,0.15), transparent);
+    border-radius: 0 0 17px 17px;
+}
+
+section { padding: 100px 24px; position: relative; z-index: 1; }
+.section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--primary-dim);
+    color: var(--primary);
+    font-size: 12px; font-weight: 600;
+    margin-bottom: 16px;
+}
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 42px); margin-bottom: 12px; }
+.section-desc { color: var(--text-sec); font-size: 15px; line-height: 1.6; }
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produto-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all var(--transition);
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.produto-card.visible { opacity: 1; transform: translateY(0); }
+.produto-card:hover { transform: translateY(-6px); border-color: var(--primary); }
+.produto-card.featured { border-color: var(--primary); }
+.card-badge {
+    position: absolute;
+    top: 16px; right: 16px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--accent), #ef4444);
+    color: #fff;
+    font-size: 11px; font-weight: 700;
+    z-index: 2;
+}
+
+.card-img {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--primary-dim), rgba(14,165,233,0.1));
+    color: var(--primary);
+    position: relative;
+}
+.card-tag {
+    position: absolute;
+    bottom: 12px; left: 16px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    font-size: 10px; font-weight: 600;
+    color: #fff;
+}
+.card-body { padding: 20px; }
+.card-body h3 { font-size: 18px; margin-bottom: 8px; }
+.card-body p { color: var(--text-sec); font-size: 13px; line-height: 1.6; margin-bottom: 16px; }
+.card-features { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+.card-features span { font-size: 12px; color: var(--text-sec); display: flex; align-items: center; gap: 8px; }
+.card-features i { color: var(--primary); font-size: 10px; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; }
+.card-price {
+    font-size: 22px; font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.btn-card {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+.btn-card:hover { background: var(--primary); color: #fff; }
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 12px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.galeria-item {
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+.galeria-item:hover { transform: scale(1.02); }
+.g1 { grid-column: span 2; background: linear-gradient(135deg, #0a4e3a, #0d6e50); }
+.g2 { grid-column: span 1; grid-row: span 2; background: linear-gradient(135deg, #0c4a6e, #0e7490); }
+.g3 { background: linear-gradient(135deg, #3b0764, #6b21a8); }
+.g4 { background: linear-gradient(135deg, #831843, #be185d); }
+.g5 { background: linear-gradient(135deg, #14532d, #15803d); }
+.g6 { grid-column: span 2; background: linear-gradient(135deg, #1e3a5f, #2563eb); }
+
+.galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.galeria-item:hover .galeria-overlay { opacity: 1; }
+.galeria-overlay h3 { color: #fff; font-size: 16px; }
+.galeria-overlay p { color: rgba(255,255,255,0.7); font-size: 12px; }
+
+.game-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 32px;
+    text-align: center;
+}
+.game-hud { display: flex; justify-content: center; gap: 32px; margin-bottom: 20px; flex-wrap: wrap; }
+.hud-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-sec); }
+.hud-item i { color: var(--primary); }
+.hud-item strong { color: var(--text); font-size: 18px; }
+#gameCanvas {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 800/500;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    cursor: crosshair;
+    display: block;
+    margin: 0 auto;
+}
+.game-controls { margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.game-info { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+.game-info p { color: var(--text-sec); font-size: 12px; display: flex; align-items: center; gap: 6px; }
+
+.contato-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.contato-info { display: flex; flex-direction: column; gap: 16px; }
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: all var(--transition);
+}
+.info-card:hover { border-color: var(--primary); }
+.info-card i {
+    font-size: 24px;
+    color: var(--primary);
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 12px;
+    background: var(--primary-dim);
+}
+.info-card h4 { font-size: 14px; margin-bottom: 4px; }
+.info-card p { font-size: 13px; color: var(--text-sec); }
+
+.contato-form {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-group { position: relative; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: all var(--transition);
+    outline: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--primary);
+}
+.form-group i {
+    position: absolute;
+    left: 14px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-sec);
+    transition: color var(--transition);
+}
+.form-group.textarea-group i { top: 18px; transform: none; }
+.form-group:focus-within i { color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.btn-submit { width: 100%; justify-content: center; padding: 14px; font-size: 15px; }
+
+.footer { padding: 40px 24px; text-align: center; border-top: 1px solid var(--border); }
+.footer-content { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.footer-brand { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; }
+.footer-brand .logo-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 16px;
+}
+.footer-text { color: var(--text-sec); font-size: 13px; }
+.footer-social { display: flex; gap: 16px; }
+.footer-social a {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-sec);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+.footer-social a:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-dim); }
+.footer-copy { font-size: 12px; color: var(--text-sec); }
+
+@media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { display: none; }
+    .contato-container { grid-template-columns: 1fr; }
+    .galeria-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+    .g1, .g2, .g6 { grid-column: span 2; }
+    .galeria-item { height: 160px; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 280px; height: 100vh;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 80px 32px 32px;
+        gap: 20px;
+        transition: right 0.4s;
+        border-left: 1px solid var(--border);
+    }
+    .nav-links.open { right: 0; }
+    .nav-toggle { display: flex; }
+    .btn-nav-cart span { display: none; }
+    .hero-stats { gap: 20px; }
+    .hero-title { font-size: 32px; }
+    .produtos-grid { grid-template-columns: 1fr; }
+}
