@@ -1,195 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaNexus - Aquários Premium</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaNexus - Aquários Premium</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <canvas id="particlesCanvas"></canvas>
-    <div class="bubble-container" id="bubbleContainer"></div>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-icon"><i class="fas fa-fish"></i></div>
-                <span class="logo-text">Aqua<span class="gradient-text">Nexus</span></span>
-                <span class="logo-badge">Premium</span>
-            </div>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#produtos" class="nav-link">Produtos</a>
-                <a href="#galeria" class="nav-link">Galeria</a>
-                <a href="#jogo" class="nav-link">AquaGame</a>
-                <a href="#contato" class="nav-link">Contato</a>
-            </div>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle"><i class="fas fa-sun sun-icon"></i><i class="fas fa-moon moon-icon"></i></button>
-                <a href="#contato" class="btn-nav-cart"><i class="fas fa-shopping-cart"></i><span>Orçamento</span></a>
-                <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-            </div>
-        </div>
-    </nav>
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge"><i class="fas fa-fish"></i><span>Desde 2024 • Premium Aquarismo</span></div>
-            <h1 class="hero-title">Transforme seu<br><span class="gradient-text">Mundo Aquático</span></h1>
-            <p class="hero-subtitle">Aquários projetados com tecnologia, design e paixão. Do paisagismo aquático à manutenção completa — mergulhe nessa experiência.</p>
-            <div class="hero-stats">
-                <div class="stat-item"><span class="stat-number" data-target="250">0</span><span class="stat-label">+ Aquários Entregues</span></div>
-                <div class="stat-item"><span class="stat-number" data-target="98">0</span><span class="stat-label">% Satisfação</span></div>
-                <div class="stat-item"><span class="stat-number" data-target="47">0</span><span class="stat-label">Espécies Exóticas</span></div>
-            </div>
-            <div class="hero-actions">
-                <a href="#produtos" class="btn btn-primary"><span>Ver Produtos</span><i class="fas fa-arrow-down"></i></a>
-                <a href="#jogo" class="btn btn-outline"><i class="fas fa-gamepad"></i><span>Jogar Agora</span></a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-aquarium">
-                <div class="aquarium-glass">
-                    <div class="fish f1"><i class="fas fa-fish"></i></div>
-                    <div class="fish f2"><i class="fas fa-fish"></i></div>
-                    <div class="fish f3"><i class="fas fa-fish"></i></div>
-                    <div class="fish f4"><i class="fas fa-fish"></i></div>
-                    <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
-                    <div class="seaweed s1"></div><div class="seaweed s2"></div>
-                    <div class="sand-line"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="produtos" id="produtos">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-box"></i> Produtos</span>
-            <h2 class="section-title">Nossos <span class="gradient-text">Kits</span> e Serviços</h2>
-            <p class="section-desc">Soluções completas para todos os níveis de aquarismo</p>
-        </div>
-        <div class="produtos-grid">
-            <div class="produto-card" data-delay="0">
-                <div class="card-img"><i class="fas fa-water"></i><span class="card-tag">Iniciante</span></div>
-                <div class="card-body">
-                    <h3>Kit Iniciante 30L</h3>
-                    <p>Aquário completo 30L com filtro, iluminação LED, substrato e 3 plantas naturais.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Filtro interno</span><span><i class="fas fa-check"></i> LED 6500K</span><span><i class="fas fa-check"></i> Termostato</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 599</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card featured" data-delay="1">
-                <div class="card-badge">Mais Popular</div>
-                <div class="card-img"><i class="fas fa-tree"></i><span class="card-tag">Intermediário</span></div>
-                <div class="card-body">
-                    <h3>Kit Nature 60L</h3>
-                    <p>Aquário plantado 60L com CO2, substrato fértil, aquascaping completo e 8 espécies.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> CO2 completo</span><span><i class="fas fa-check"></i> Substrato fértil</span><span><i class="fas fa-check"></i> Aquascaping</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 1.299</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="2">
-                <div class="card-img"><i class="fas fa-gem"></i><span class="card-tag">Avançado</span></div>
-                <div class="card-body">
-                    <h3>Aquário Premium 120L</h3>
-                    <p>Tanque 120L com sump externo, automação completa, skimmer e reef-ready.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Automação WiFi</span><span><i class="fas fa-check"></i> Sump externo</span><span><i class="fas fa-check"></i> Reef Ready</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 3.499</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="3">
-                <div class="card-img"><i class="fas fa-hand-holding-heart"></i><span class="card-tag">Serviço</span></div>
-                <div class="card-body">
-                    <h3>Manutenção Mensal</h3>
-                    <p>Serviço completo de manutenção: limpeza, troca parcial de água, testes e poda.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Visita semanal</span><span><i class="fas fa-check"></i> Testes de água</span><span><i class="fas fa-check"></i> Poda paisagismo</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 149/mês</span><a href="#contato" class="btn-card">Assinar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="4">
-                <div class="card-img"><i class="fas fa-palette"></i><span class="card-tag">Projeto</span></div>
-                <div class="card-body">
-                    <h3>Aquascaping Custom</h3>
-                    <p>Projeto personalizado de paisagismo aquático com designer especializado.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> Projeto 3D</span><span><i class="fas fa-check"></i> Rochas & troncos</span><span><i class="fas fa-check"></i> Plantas selecionadas</span></div>
-                    <div class="card-footer"><span class="card-price">Consultar</span><a href="#contato" class="btn-card">Solicitar</a></div>
-                </div>
-            </div>
-            <div class="produto-card" data-delay="5">
-                <div class="card-img"><i class="fas fa-seedling"></i><span class="card-tag">Acessório</span></div>
-                <div class="card-body">
-                    <h3>Kit Plantas + CO2</h3>
-                    <p>Pacote com 10 mudas variadas + sistema CO2 artesanal com difusor cerâmico.</p>
-                    <div class="card-features"><span><i class="fas fa-check"></i> 10 mudas</span><span><i class="fas fa-check"></i> CO2 + difusor</span><span><i class="fas fa-check"></i> Fertilizante 1L</span></div>
-                    <div class="card-footer"><span class="card-price">R$ 249</span><a href="#contato" class="btn-card">Comprar</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="galeria" id="galeria">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-images"></i> Galeria</span>
-            <h2 class="section-title">Projetos <span class="gradient-text">Realizados</span></h2>
-            <p class="section-desc">Veja alguns dos aquários que já montamos para nossos clientes</p>
-        </div>
-        <div class="galeria-grid">
-            <div class="galeria-item g1"><div class="galeria-overlay"><h3>Aquário Nature 60L</h3><p>Iwagumi com Riccardia</p></div></div>
-            <div class="galeria-item g2"><div class="galeria-overlay"><h3>Aquário Premium 200L</h3><p>Community sul-americano</p></div></div>
-            <div class="galeria-item g3"><div class="galeria-overlay"><h3>Paludário 80L</h3><p>Vivário com queda d'água</p></div></div>
-            <div class="galeria-item g4"><div class="galeria-overlay"><h3>Nano Reef 30L</h3><p>Recifal compacto</p></div></div>
-            <div class="galeria-item g5"><div class="galeria-overlay"><h3>Aquário Holandês 100L</h3><p>Jardim aquático holandês</p></div></div>
-            <div class="galeria-item g6"><div class="galeria-overlay"><h3>Aquário Betta 20L</h3><p>Estilo biotopo asiático</p></div></div>
-        </div>
-    </section>
-    <section class="jogo" id="jogo">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-gamepad"></i> AquaGame</span>
-            <h2 class="section-title">Alimente os <span class="gradient-text">Peixes</span> 🐟</h2>
-            <p class="section-desc">Clique no aquário para jogar! Alimente os peixes e ganhe pontos!</p>
-        </div>
-        <div class="game-wrapper">
-            <div class="game-hud">
-                <div class="hud-item"><i class="fas fa-star"></i><span>Pontos: <strong id="gameScore">0</strong></span></div>
-                <div class="hud-item"><i class="fas fa-fish"></i><span>Peixes: <strong id="gameFish">5</strong></span></div>
-                <div class="hud-item"><i class="fas fa-clock"></i><span>Tempo: <strong id="gameTimer">30s</strong></span></div>
-            </div>
-            <canvas id="gameCanvas" width="800" height="500"></canvas>
-            <div class="game-controls">
-                <button class="btn btn-primary" id="startGameBtn"><i class="fas fa-play"></i><span>Iniciar Jogo</span></button>
-                <div class="game-info"><p><i class="fas fa-mouse-pointer"></i> Clique para soltar comida</p><p><i class="fas fa-fish"></i> Cada peixe alimentado = +10 pontos</p></div>
-            </div>
-        </div>
-    </section>
-    <section class="contato" id="contato">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-envelope"></i> Contato</span>
-            <h2 class="section-title">Vamos criar seu <span class="gradient-text">Aquário</span></h2>
-            <p class="section-desc">Solicite um orçamento ou tire suas dúvidas</p>
-        </div>
-        <div class="contato-container">
-            <div class="contato-info">
-                <div class="info-card"><i class="fas fa-map-marker-alt"></i><div><h4>Localização</h4><p>São Paulo, SP - Brasil</p></div></div>
-                <div class="info-card"><i class="fas fa-whatsapp"></i><div><h4>WhatsApp</h4><p>(11) 99999-8888</p></div></div>
-                <div class="info-card"><i class="fas fa-envelope"></i><div><h4>E-mail</h4><p>contato@aquanexus.com.br</p></div></div>
-                <div class="info-card"><i class="fas fa-clock"></i><div><h4>Horários</h4><p>Seg-Sex: 9h-18h | Sáb: 9h-13h</p></div></div>
-            </div>
-            <form class="contato-form" id="contatoForm">
-                <div class="form-group"><input type="text" placeholder="Seu nome" required><i class="fas fa-user"></i></div>
-                <div class="form-group"><input type="email" placeholder="Seu e-mail" required><i class="fas fa-envelope"></i></div>
-                <div class="form-group"><select required><option value="">Selecione um serviço</option><option>Kit Iniciante 30L</option><option>Kit Nature 60L</option><option>Aquário Premium 120L</option><option>Manutenção Mensal</option><option>Aquascaping Custom</option><option>Kit Plantas + CO2</option><option>Outro</option></select><i class="fas fa-box"></i></div>
-                <div class="form-group textarea-group"><textarea placeholder="Descreva seu projeto ou dúvida..." rows="4"></textarea><i class="fas fa-pen"></i></div>
-                <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i><span>Enviar Mensagem</span></button>
-            </form>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand"><div class="logo-icon"><i class="fas fa-fish"></i></div><span>Aqua<span class="gradient-text">Nexus</span></span></div>
-            <p class="footer-text"><i class="fas fa-heart" style="color: var(--primary);"></i> Aquários Premium com tecnologia e paixão</p>
-            <div class="footer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
-            <p class="footer-copy">© 2026 AquaNexus — Criado por <span class="gradient-text">Nexus AI</span> 🚀</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<canvas id="particlesCanvas"></canvas>
+<div class="bubble-container" id="bubbleContainer"></div>
+<nav class="navbar" id="navbar">
+<div class="nav-container">
+<div class="nav-logo">
+<div class="logo-icon"><i class="fas fa-fish"></i></div>
+<span class="logo-text">Aqua<span class="gradient-text">Nexus</span></span>
+<span class="logo-badge">Premium</span>
+</div>
+<div class="nav-links" id="navLinks">
+<a href="#home" class="nav-link active">Home</a>
+<a href="#produtos" class="nav-link">Produtos</a>
+<a href="#galeria" class="nav-link">Galeria</a>
+<a href="#jogo" class="nav-link">AquaGame</a>
+<a href="#contato" class="nav-link">Contato</a>
+</div>
+<div class="nav-actions">
+<button class="theme-toggle" id="themeToggle"><i class="fas fa-sun sun-icon"></i><i class="fas fa-moon moon-icon"></i></button>
+<a href="#contato" class="btn-nav-cart"><i class="fas fa-shopping-cart"></i><span>Orcamento</span></a>
+<button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+</nav>
+<section class="hero" id="home">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badge"><i class="fas fa-fish"></i><span>Desde 2024 - Premium Aquarismo</span></div>
+<h1 class="hero-title">Transforme seu<br><span class="gradient-text">Mundo Aquatico</span></h1>
+<p class="hero-subtitle">Aquarios projetados com tecnologia, design e paixao. Do paisagismo aquatico a manutencao completa — mergulhe nessa experiencia.</p>
+<div class="hero-stats">
+<div class="stat-item"><span class="stat-number" data-target="250">0</span><span class="stat-label">+ Aquarios Entregues</span></div>
+<div class="stat-item"><span class="stat-number" data-target="98">0</span><span class="stat-label">% Satisfacao</span></div>
+<div class="stat-item"><span class="stat-number" data-target="47">0</span><span class="stat-label">Especies Exoticas</span></div>
+</div>
+<div class="hero-actions">
+<a href="#produtos" class="btn btn-primary"><span>Ver Produtos</span><i class="fas fa-arrow-down"></i></a>
+<a href="#jogo" class="btn btn-outline"><i class="fas fa-gamepad"></i><span>Jogar Agora</span></a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-aquarium">
+<div class="aquarium-glass">
+<div class="fish f1"><i class="fas fa-fish"></i></div>
+<div class="fish f2"><i class="fas fa-fish"></i></div>
+<div class="fish f3"><i class="fas fa-fish"></i></div>
+<div class="fish f4"><i class="fas fa-fish"></i></div>
+<div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+<div class="seaweed s1"></div><div class="seaweed s2"></div>
+<div class="sand-line"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="produtos" id="produtos">
+<div class="section-header">
+<span class="section-tag"><i class="fas fa-box"></i> Produtos</span>
+<h2 class="section-title">Nossos <span class="gradient-text">Kits</span> e Servicos</h2>
+<p class="section-desc">Solucoes completas para todos os niveis de aquarismo</p>
+</div>
+<div class="produtos-grid">
+<div class="produto-card" data-delay="0">
+<div class="card-img"><i class="fas fa-water"></i><span class="card-tag">Iniciante</span></div>
+<div class="card-body"><h3>Kit Iniciante 30L</h3><p>Aquario completo 30L com filtro, iluminacao LED, substrato e 3 plantas naturais.</p>
+<div class="card-features"><span><i class="fas fa-check"></i> Filtro interno</span><span><i class="fas fa-check"></i> LED 6500K</span><span><i class="fas fa-check"></i> Termostato</span></div>
+<div class="card-footer"><span class="card-price">R$ 599</span><a href="#contato" class="btn-card">Solicitar</a></div></div>
+</div>
+<div class="produto-card featured" data-delay="1">
+<div class="card-badge">Mais Popular</div>
+<div class="card-img"><i class="fas fa-tree"></i><span class="card-tag">Intermediario</span></div>
+<div class="card-body"><h3>Kit Nature 60L</h3><p>Aquario plantado 60L com CO2, substrato fertil, aquascaping completo e 8 especies.</p>
+<div class="card-features"><span><i class="fas fa-check"></i> CO2 completo</span><span><i class="fas fa-check"></i> Substrato fertil</span><span><i class="fas fa-check"></i> Aquascaping</span></div>
+<div class="card-footer"><span class="card-price">R$ 1.299</span><a href="#contato" class="btn-card">Solicitar</a></div></div>
+</div>
+<div class="produto-card" data-delay="2">
+<div class="card-img"><i class="fas fa-gem"></i><span class="card-tag">Avancado</span></div>
+<div class="card-body"><h3>Aquario Premium 120L</h3><p>Tanque 120L com sump externo, automacao completa, skimmer e reef-ready.</p>
+<div class="card-features"><span><i class="fas fa-check"></i> Automacao WiFi</span><span><i class="fas fa-check"></i> Sump externo</span><span><i class="fas fa-check"></i> Reef Ready</span></div>
+<div class="card-footer"><span class="card-price">R$ 3.499</span><a href="#contato" class="btn-card">Solicitar</a></div></div>
+</div>
+<div class="produto-card" data-delay="3">
+<div class="card-img"><i class="fas fa-hand-holding-heart"></i><span class="card-tag">Servico</span></div>
+<div class="card-body"><h3>Manutencao Mensal</h3><p>Servico completo de manutencao: limpeza, troca parcial de agua, testes e poda.</p>
+<div class="card-features"><span><i class="fas fa-check"></i> Visita semanal</span><span><i class="fas fa-check"></i> Testes de agua</span><span><i class="fas fa-check"></i> Poda paisagismo</span></div>
+<div class="card-footer"><span class="card-price">R$ 149/mes</span><a href="#contato" class="btn-card">Assinar</a></div></div>
+</div>
+<div class="produto-card" data-delay="4">
+<div class="card-img"><i class="fas fa-palette"></i><span class="card-tag">Projeto</span></div>
+<div class="card-body"><h3>Aquascaping Custom</h3><p>Projeto personalizado de paisagismo aquatico com designer especializado.</p>
+<div class="card-features"><span><i class="fas fa-check"></i> Projeto 3D</span><span><i class="fas fa-check"></i> Rochas & troncos</span><span><i class="fas fa-check"></i> Plantas selecionadas</span></div>
+<div class="card-footer"><span class="card-price">Consultar</span><a href="#contato" class="btn-card">Solicitar</a></div></div>
+</div>
+<div class="produto-card" data-delay="5">
+<div class="card-img"><i class="fas fa-seedling"></i><span class="card-tag">Acessorio</span></div>
+<div class="card-body"><h3>Kit Plantas + CO2</h3><p>Pacote com 10 mudas variadas + sistema CO2 artesanal com difusor ceramico.</p>
+<div class="card-features"><span><i class="fas fa-check"></i> 10 mudas</span><span><i class="fas fa-check"></i> CO2 + difusor</span><span><i class="fas fa-check"></i> Fertilizante 1L</span></div>
+<div class="card-footer"><span class="card-price">R$ 249</span><a href="#contato" class="btn-card">Comprar</a></div></div>
+</div>
+</div>
+</section>
+<section class="galeria" id="galeria">
+<div class="section-header"><span class="section-tag"><i class="fas fa-images"></i> Galeria</span><h2 class="section-title">Projetos <span class="gradient-text">Realizados</span></h2><p class="section-desc">Veja alguns dos aquarios que ja montamos para nossos clientes</p></div>
+<div class="galeria-grid">
+<div class="galeria-item g1"><div class="galeria-overlay"><h3>Aquario Nature 60L</h3><p>Iwagumi com Riccardia</p></div></div>
+<div class="galeria-item g2"><div class="galeria-overlay"><h3>Aquario Premium 200L</h3><p>Community sul-americano</p></div></div>
+<div class="galeria-item g3"><div class="galeria-overlay"><h3>Paludario 80L</h3><p>Vivario com queda dagua</p></div></div>
+<div class="galeria-item g4"><div class="galeria-overlay"><h3>Nano Reef 30L</h3><p>Recifal compacto</p></div></div>
+<div class="galeria-item g5"><div class="galeria-overlay"><h3>Aquario Holandes 100L</h3><p>Jardim aquatico holandes</p></div></div>
+<div class="galeria-item g6"><div class="galeria-overlay"><h3>Aquario Betta 20L</h3><p>Estilo biotopo asiatico</p></div></div>
+</div>
+</section>
+<section class="jogo" id="jogo">
+<div class="section-header"><span class="section-tag"><i class="fas fa-gamepad"></i> AquaGame</span><h2 class="section-title">Alimente os <span class="gradient-text">Peixes</span></h2><p class="section-desc">Clique no aquario para jogar! Alimente os peixes e ganhe pontos!</p></div>
+<div class="game-wrapper">
+<div class="game-hud">
+<div class="hud-item"><i class="fas fa-star"></i><span>Pontos: <strong id="gameScore">0</strong></span></div>
+<div class="hud-item"><i class="fas fa-fish"></i><span>Peixes: <strong id="gameFish">5</strong></span></div>
+<div class="hud-item"><i class="fas fa-clock"></i><span>Tempo: <strong id="gameTimer">30s</strong></span></div>
+</div>
+<canvas id="gameCanvas" width="800" height="500"></canvas>
+<div class="game-controls">
+<button class="btn btn-primary" id="startGameBtn"><i class="fas fa-play"></i><span>Iniciar Jogo</span></button>
+<div class="game-info"><p><i class="fas fa-mouse-pointer"></i> Clique para soltar comida</p><p><i class="fas fa-fish"></i> Cada peixe alimentado = +10 pontos</p></div>
+</div>
+</div>
+</section>
+<section class="contato" id="contato">
+<div class="section-header"><span class="section-tag"><i class="fas fa-envelope"></i> Contato</span><h2 class="section-title">Vamos criar seu <span class="gradient-text">Aquario</span></h2><p class="section-desc">Solicite um orcamento ou tire suas duvidas</p></div>
+<div class="contato-container">
+<div class="contato-info">
+<div class="info-card"><i class="fas fa-map-marker-alt"></i><div><h4>Localizacao</h4><p>Sao Paulo, SP - Brasil</p></div></div>
+<div class="info-card"><i class="fas fa-whatsapp"></i><div><h4>WhatsApp</h4><p>(11) 99999-8888</p></div></div>
+<div class="info-card"><i class="fas fa-envelope"></i><div><h4>E-mail</h4><p>contato@aquanexus.com.br</p></div></div>
+<div class="info-card"><i class="fas fa-clock"></i><div><h4>Horarios</h4><p>Seg-Sex: 9h-18h | Sab: 9h-13h</p></div></div>
+</div>
+<form class="contato-form" id="contatoForm">
+<div class="form-group"><input type="text" placeholder="Seu nome" required><i class="fas fa-user"></i></div>
+<div class="form-group"><input type="email" placeholder="Seu e-mail" required><i class="fas fa-envelope"></i></div>
+<div class="form-group"><select required><option value="">Selecione um servico</option><option>Kit Iniciante 30L</option><option>Kit Nature 60L</option><option>Aquario Premium 120L</option><option>Manutencao Mensal</option><option>Aquascaping Custom</option><option>Kit Plantas + CO2</option><option>Outro</option></select><i class="fas fa-box"></i></div>
+<div class="form-group textarea-group"><textarea placeholder="Descreva seu projeto ou duvida..." rows="4"></textarea><i class="fas fa-pen"></i></div>
+<button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i><span>Enviar Mensagem</span></button>
+</form>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-brand"><div class="logo-icon"><i class="fas fa-fish"></i></div><span>Aqua<span class="gradient-text">Nexus</span></span></div>
+<p class="footer-text">Aquarios Premium com tecnologia e paixao</p>
+<div class="footer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+<p class="footer-copy">2026 AquaNexus - Criado por Nexus AI</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
